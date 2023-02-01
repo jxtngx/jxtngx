@@ -2,4 +2,4 @@
 
 Hi! I'm Justin and I'm "focused on developing tools, systems, and processes to enable the application of artificial intelligence in real-world contexts" [(SEI-CMU)](https://www.sei.cmu.edu/our-work/artificial-intelligence-engineering/).
 
-Aside from my work here, you can also check out what I've shared on [my Lightning.ai profile](https://lightning.ai/JustinGoheen/apps).
+Aside from my work here, you can also check out what I've shared on [my Lightning.ai profile](https://lightning.ai/JustinGoheen/apps) and at [my blog](https://justingoheen.github.io/wiki/).
