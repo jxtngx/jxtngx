@@ -4,4 +4,4 @@ Hi! I'm Justin and I'm "focused on developing tools, systems, and processes to e
 
 Check out my contributions to Lightning in my [contributions project](https://github.com/users/JustinGoheen/projects/16).
 
-Aside from my work here, you can also check out what I've shared on my Lightning.ai [profile](https://lightning.ai/JustinGoheen/apps) and my [blog](https://justingoheen.github.io/wiki/).
+Aside from my work here, you can also check out what I've shared on my Lightning [profile](https://lightning.ai/JustinGoheen/apps) and my [blog](https://justingoheen.github.io/wiki/).
