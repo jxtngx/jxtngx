@@ -6,6 +6,6 @@ My primary focus with regard to community contributions is on developing and imp
 
 My professional focus is on developing solutions for financial trading applications with [IBKR APIs](https://www.interactivebrokers.com/en/trading/ib-api.php) as [Lightning Apps](https://lightning.ai/docs/stable/).
 
-Check out my contributions to Lightning in my [contributions project](https://github.com/users/JustinGoheen/projects/16).
+My academic experience includes an M.S. in AI from [Drexel University](https://drexel.edu/cci/) and a B.A. in Finance from [Florida Atlantic University](https://business.fau.edu).
 
 Aside from my work here, you can also check out what I've shared on my Lightning [profile](https://lightning.ai/JustinGoheen/apps) and my [blog](https://justingoheen.github.io/wiki/).
