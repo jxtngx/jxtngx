@@ -8,4 +8,4 @@ My professional focus is on developing solutions for financial trading applicati
 
 My academic experience includes an M.S. in AI from [Drexel University](https://drexel.edu/cci/) and a B.A. in Finance from [Florida Atlantic University](https://business.fau.edu).
 
-Aside from my work here, you can also check out what I've shared on my Lightning [profile](https://lightning.ai/JustinGoheen/apps) and my [blog](https://justingoheen.github.io/wiki/).
+Aside from my work here, you can also check out what I've shared on my Lightning [profile](https://lightning.ai/JustinGoheen/apps) and my [blog](https://justingoheen.github.io/blog/).
