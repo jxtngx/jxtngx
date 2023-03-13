@@ -2,7 +2,7 @@
 
 Hi! I'm Justin and I'm "focused on developing tools, systems, and processes to enable the application of artificial intelligence in real-world contexts" [(SEI-CMU)](https://www.sei.cmu.edu/our-work/artificial-intelligence-engineering/).
 
-My focus with regard to community contributions is on contributing to [Lightning AI](https://lightning.ai) as a [community ambassador](https://lightning.ai/pages/ambassador-program/), and maintaining [lightning-pod-lite](https://github.com/JustinGoheen/lightning-pod) and [lightning-pod-example](https://github.com/JustinGoheen/lightning-pod-example) as a resource for individuals who are new to AI and machine learning, or who are new Lightning users. 
+My focus with regard to community contributions is on contributing to [Lightning AI](https://lightning.ai) as a [community ambassador](https://lightning.ai/pages/ambassador-program/), and maintaining [lightning-pod-lite](https://github.com/JustinGoheen/lightning-pod) and [lightning-pod-vision](https://github.com/JustinGoheen/lightning-pod-vision) as a resource for individuals who are new to AI and machine learning, or who are new Lightning users. 
 
 Lightning Pod Vision uses [Weights and Biases](http://wandb.ai/site), [Supabase](https://supabase.com), [Prisma](https://www.prisma.io) and [FastAPI](https://fastapi.tiangolo.com). The project also contains an example of using my fork of keras-autodocs to create .md and .mdx files for a [docusaurus](https://docusaurus.io) docs deployed to [Vercel](https://docusaurus.io).
 
