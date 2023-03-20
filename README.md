@@ -2,7 +2,7 @@
 
 Hi! I'm Justin and I'm "focused on developing tools, systems, and processes to enable the application of artificial intelligence in real-world contexts" [(SEI-CMU)](https://www.sei.cmu.edu/our-work/artificial-intelligence-engineering/).
 
-My focus with regard to community contributions is on contributing to [Lightning AI](https://lightning.ai) as a [community ambassador](https://lightning.ai/pages/ambassador-program/), and creating use-case example for [Weights and Biases](http://wandb.ai/site) and [Supabase](https://supabase.com) in my projects. 
+My focus with regard to community contributions is on contributing to [Lightning AI](https://lightning.ai) as a [community ambassador](https://lightning.ai/pages/ambassador-program/), and creating examples for [Weights and Biases](http://wandb.ai/site) and [Supabase](https://supabase.com) in my projects. 
 
 My personal focus is on developing financial trading applications as applied use of artificial intelligence to automate trading systems. As part of this, I've created several projects to assist with data acquistion, pre-processing, and storage.
 
