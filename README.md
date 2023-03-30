@@ -2,7 +2,7 @@
 
 Hi! I'm Justin – I'm a developer advocate at [Lightning AI](https://lightning.ai) focused on amplifying the Lightning community's experience to enable engineers, scientists, and researchers to drive the world forward with Lightning.
 
-My focus with regard to community contributions is on creating and maintaining beyond-surface-level examples and tutorials in the Lightning Pod series of repos. 
+My focus with regard to community contributions is on creating and maintaining tutorials in the Lightning Pod series of repos. 
 
 My personal focus is on developing financial trading applications as an applied use of artificial intelligence.
 
