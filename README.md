@@ -2,4 +2,4 @@ Hi! I'm Justin, and I'm focused on enabling the application of artificial intell
 
 [Lightning Labs](https://github.com/stars/JustinGoheen/lists/lightning-labs) are my [Lightning Fabric](https://lightning.ai/docs/fabric/stable/) and PyTorch Lightning focused repos. Lightning Labs are helpful guides for a variety of domains and popular tools like [Weights and Biases](https://wandb.ai/site), [Streamlit](https://streamlit.io), [FastAPI](https://fastapi.tiangolo.com), building CLIs with [Typer](https://typer.tiangolo.com), and using [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) to blog and document source code. Each Lab is also equipped with a minimal devcontainer to help you launch a CodeSpace and run a default example on CPUs in a Linux environment. 
 
-Have a question? Drop me a line in [Discussions](https://github.com/JustinGoheen/JustinGoheen/discussions/) 👍
+Have a question? Drop me a line in [Discussions](https://github.com/JustinGoheen/JustinGoheen/discussions/) or find me Lightning's [Discord](https://discord.gg/XncpTy7DSt) 👍
