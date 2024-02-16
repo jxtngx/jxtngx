@@ -1,5 +1,3 @@
-Hi! I'm Justin, and I'm focused on enabling the application of artificial intelligence in real-world contexts as a developer advocate at [Lightning AI](https://github.com/Lightning-AI), the creators of [PyTorch Lightning](https://lightning.ai/docs/pytorch/stable/) and [TorchMetrics](https://lightning.ai/docs/torchmetrics/stable/).
+Hi! I'm Justin, and I'm focused on enabling the application of artificial intelligence in real-world contexts as an Applied AI Engineer at [Lightning AI](https://github.com/Lightning-AI).
 
-[Lightning Labs](https://github.com/stars/JustinGoheen/lists/lightning-labs) are my [Lightning Fabric](https://lightning.ai/docs/fabric/stable/) and PyTorch Lightning focused repos. Lightning Labs are helpful guides for a variety of domains and popular tools like [Weights and Biases](https://wandb.ai/site), [Streamlit](https://streamlit.io), [FastAPI](https://fastapi.tiangolo.com), building CLIs with [Typer](https://typer.tiangolo.com), and using [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) to blog and document source code. Each Lab is also equipped with a minimal devcontainer to help you launch a CodeSpace and run a default example on CPUs in a Linux environment. 
-
-Have a question? Drop me a line in [Discussions](https://github.com/JustinGoheen/JustinGoheen/discussions/) or find me Lightning's [Discord](https://discord.gg/XncpTy7DSt) 👍
+Have a question? Drop me a line in Lightning's [Discord](https://discord.gg/XncpTy7DSt) 👍
