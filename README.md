@@ -1,2 +1,1 @@
-→ PyTorch <br/>
-→ deep learning R&D in bioscience and biosensors
+deep learning R&D in bioscience and biosensors
