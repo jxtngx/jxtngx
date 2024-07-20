@@ -1,1 +1,1 @@
-deep learning R&D in bioscience and biosensors
+deep learning R&D for bioscience and biosensors
