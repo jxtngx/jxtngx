@@ -1,1 +1,1 @@
-deep learning R&D for bioscience
+Hi! I'm Justin, and I'm focused on developing tools, systems, and processes to enable the application of artificial intelligence in real-world contexts.
