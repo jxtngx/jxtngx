@@ -1,1 +1,1 @@
-Hi! I'm Justin, and I'm focused on developing tools, systems, and processes to enable the application of artificial intelligence in real-world contexts.
+Hi! I'm Justin, and I'm excited about developing tools, systems, and processes to enable accelerated AI in real-world applications.
