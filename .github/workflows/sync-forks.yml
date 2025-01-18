@@ -19,7 +19,10 @@ jobs:
           FAILED_FORKS=()
           # get all forks of the owner
           echo "FORKS=$(gh repo list ${{ github.actor }} --fork --limit 50 --json name --jq '.[].name' | tr '\n' ' ')" >> $GITHUB_ENV
-          echo $FORKS
+          if [ -z "$FORKS" ]; then
+            echo "No forks found for ${{ github.actor }}"
+            exit 0
+          fi
           # loop through each fork to sync
           for fork in $FORKS
           do
