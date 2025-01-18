@@ -11,23 +11,15 @@ jobs:
   sync_fork:
     runs-on: ubuntu-latest
     steps:
-      - name: List forks
-        env:
-            GH_TOKEN: ${{ secrets.GH_PAT }}
-        run: |
-          FORKS=$(gh repo list ${{ github.actor }} --fork --limit 50 --json name --jq '.[].name')
-          echo "FORKS=$FORKS" >> $GITHUB_ENV
-          if [ -z "$FORKS" ]; then
-            echo "Error: FORKS variable is not set"
-            exit 1
-          fi
-
-
       - name: Sync forks
         env:
             GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
+          # empty array to store failed forks
           FAILED_FORKS=()
+          # get all forks of the owner
+          echo "FORKS=$(gh repo list ${{ github.actor }} --fork --limit 50 --json name --jq '.[].name')" >> $GITHUB_ENV
+          # loop through each fork to sync
           for fork in $FORKS
           do
             echo "Syncing fork: $fork"
@@ -43,7 +35,7 @@ jobs:
               FAILED_FORKS+=("$fork")
             fi
           done
-
+          # tell the user which forks failed to sync
           if [ ${#FAILED_FORKS[@]} -gt 0 ]; then
             echo "Failed to sync ${#FAILED_FORKS[@]} fork(s):"
             printf '%s\n' "${FAILED_FORKS[@]}"
