@@ -40,7 +40,6 @@ jobs:
           done
           # tell the user which forks failed to sync
           if [ ${#FAILED_FORKS[@]} -gt 0 ]; then
-            echo "Failed to sync ${#FAILED_FORKS[@]} fork(s):"
+            echo "Failed to sync ${#FAILED_FORKS[@]}:"
             printf '%s\n' "${FAILED_FORKS[@]}"
           fi
-
