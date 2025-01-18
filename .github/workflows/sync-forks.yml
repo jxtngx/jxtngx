@@ -10,6 +10,8 @@ on:
 jobs:
   sync_fork:
     runs-on: ubuntu-latest
+    env:
+        GH_TOKEN: ${{ secrets.GH_PAT }}
     steps:
       - name: List forks
         run: |
