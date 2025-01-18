@@ -18,7 +18,9 @@ jobs:
           # empty array to store failed forks
           FAILED_FORKS=()
           # get all forks of the owner
-          echo "FORKS=$(gh repo list ${{ github.actor }} --fork --limit 50 --json name --jq '.[].name')" >> $GITHUB_ENV
+          FORK_LIST=$(gh repo list ${{ github.actor }} --fork --limit 50 --json name --jq '.[].name' | tr '\n' ' ')
+          echo $FORK_LIST
+          echo "FORKS=$FORK_LIST" >> $GITHUB_ENV
           # loop through each fork to sync
           for fork in $FORKS
           do
