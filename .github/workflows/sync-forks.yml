@@ -10,10 +10,10 @@ on:
 jobs:
   sync_fork:
     runs-on: ubuntu-latest
-    env:
-        GH_TOKEN: ${{ secrets.GH_PAT }}
     steps:
       - name: List forks
+        env:
+            GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           FORKS=$(gh repo list ${{ github.actor }} --fork --limit 50 --json name --jq '.[].name')
           echo "FORKS=$FORKS" >> $GITHUB_ENV
@@ -24,6 +24,8 @@ jobs:
 
 
       - name: Sync forks
+        env:
+            GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           FAILED_FORKS=()
           for fork in $FORKS
