@@ -1,0 +1,48 @@
+name: Sync Forks
+
+on:
+  # Run the workflow every Saturday at 7:00 AM
+  schedule:
+    - cron: "0 7 * * 1"
+  # Manually trigger the workflow
+  workflow_dispatch:
+
+jobs:
+  sync_fork:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List forks
+        run: |
+          ACTOR_FORKS=$(gh repo list ${{ github.actor }} --fork --limit 100)
+          echo "FORKS=$ACTOR_FORKS" >> $GITHUB_ENV
+          if [ -z "$FORKS" ]; then
+            echo "Error: FORKS variable is not set"
+            exit 1
+          fi
+
+
+      - name: Sync forks
+        run: |
+          FAILED_FORKS=()
+          for fork in $FORKS
+          do
+            echo "Syncing fork: $fork"
+            DEFAULT_BRANCH=$(gh repo view "$fork" --json defaultBranchRef --jq '.defaultBranchRef.name')
+            SYNC_OUTPUT=$(gh repo sync "$fork" -b "$DEFAULT_BRANCH" 2>&1)
+
+            if echo "$SYNC_OUTPUT" | grep -q "already up to date"; then
+              echo "$fork is already up to date."
+            elif echo "$SYNC_OUTPUT" | grep -q "Successfully synced"; then
+              echo "Successfully synced $fork."
+            else
+              echo "Failed to sync $fork."
+              FAILED_FORKS+=("$fork")
+            fi
+          done
+
+          if [ ${#FAILED_FORKS[@]} -gt 0 ]; then
+            echo "Failed to sync ${#FAILED_FORKS[@]} fork(s):"
+            printf '%s\n' "${FAILED_FORKS[@]}"
+            exit 1
+          fi
+
