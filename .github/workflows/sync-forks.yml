@@ -27,7 +27,7 @@ jobs:
           for fork in $FORKS; do
             echo "Syncing fork: $fork"
             DEFAULT_BRANCH=$(gh repo view "$fork" --json defaultBranchRef --jq '.defaultBranchRef.name')
-            gh repo sync "${{ github.actor }}/$fork -b $DEFAULT_BRANCH"
+            gh repo sync ${{ github.actor }}/$fork -b $DEFAULT_BRANCH
             sleep 10
           done
 
