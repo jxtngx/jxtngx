@@ -15,8 +15,8 @@ jobs:
     steps:
       - name: List forks
         run: |
-          ACTOR_FORKS=$(gh repo list ${{ github.actor }} --fork --limit 100)
-          echo "FORKS=$ACTOR_FORKS" >> $GITHUB_ENV
+          FORKS=$(gh repo list ${{ github.actor }} --fork --limit 50 --json name --jq '.[].name')
+          echo "FORKS=$FORKS" >> $GITHUB_ENV
           if [ -z "$FORKS" ]; then
             echo "Error: FORKS variable is not set"
             exit 1
