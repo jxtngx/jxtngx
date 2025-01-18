@@ -27,18 +27,7 @@ jobs:
           for fork in $FORKS; do
             echo "Syncing fork: $fork"
             DEFAULT_BRANCH=$(gh repo view "$fork" --json defaultBranchRef --jq '.defaultBranchRef.name')
-            SYNC_OUTPUT=$(gh repo sync "${{ github.actor }}/$fork -b $DEFAULT_BRANCH" 2>&1)
-            echo "$SYNC_OUTPUT"
-
-            if echo "$SYNC_OUTPUT" | grep -q "already up to date"; then
-              echo "$fork is already up to date."
-            elif echo "$SYNC_OUTPUT" | grep -q "Successfully synced"; then
-              echo "Successfully synced $fork."
-            else
-              echo "Failed to sync $fork."
-              FAILED_FORKS+=("$fork")
-            fi
-
+            gh repo sync "${{ github.actor }}"/"$fork" -b "$DEFAULT_BRANCH"
             sleep 10
           done
 
