@@ -1,7 +1,7 @@
 name: Sync Forks
 
 on:
-  # Run the workflow every Saturday at 7:00 AM
+  # Run the workflow every Monday at 7:00 AM
   schedule:
     - cron: "0 7 * * 1"
   # Manually trigger the workflow
