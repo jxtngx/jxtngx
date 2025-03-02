@@ -1,1 +1,1 @@
-Hi! I'm Justin, and I'm focused on AI with Meta's Llama, torchtune, Llama Stack, and React. My portfolio work lives in <a href="https://github.com/theosis-ai" style="text-decoration: none">@theosis-ai</a>, and major open source projects I've contributed to are shown below. 
+Hi! I'm Justin, and I'm focused on AI with Meta's Llama, torchtune, Llama Stack, and React. My portfolio work lives in <a href="https://github.com/theosis-ai" style="text-decoration: none">@theosis-ai</a>, and major open source projects I've contributed are pinned here. 
