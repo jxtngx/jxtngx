@@ -24,4 +24,4 @@ Hi! I'm Justin, and I'm focused on artificial intelligence.
 5. [Applied Fullstack AI](https://github.com/jxtngx/applied-fullstack-ai)
 
 > [!NOTE]
-> all guides are in active development
+> all guides are in active development as of 03/2025
