@@ -1,5 +1,5 @@
 ## About
-Hi! I'm Justin, and I'm focused on artificial intelligence with Meta's Llama, torchtune, Llama Stack, and React (via Next.js). 
+Hi! I'm Justin, and I'm focused on artificial intelligence with Meta's Llama family of models, torchtune, Llama Stack, and React (via Next.js). 
 
 → My core language is Python, and my secondary language is TypeScript. <br/>
 → My core focus is post-training tasks, i.e. deep learning for finetuning generative AI models. <br/>
