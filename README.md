@@ -22,6 +22,7 @@ Hi! I'm Justin, and I'm focused on artificial intelligence and deep learning sol
 3. [Intro to AI Engineering](https://github.com/jxtngx/intro-to-applied-ai)
 4. [Applied AI Engineering](https://github.com/jxtngx/applied-ai-engineering)
 5. [Applied Fullstack AI](https://github.com/jxtngx/applied-fullstack-ai)
+6. [Intro to Next.js for Python Engineers](https://github.com/jxtngx/intro-to-nextjs-for-python-engineers)
 
 > [!NOTE]
 > all guides are in active development as of 03/2025
