@@ -13,10 +13,10 @@ Hi! I'm Justin, and I'm focused on artificial intelligence with Meta's Llama fam
 → prior Developer Advocate @ Lightning AI <br/>
 → MS in AI from Drexel University
 
-## Open Courses
+## Open Guides
 
 > [!NOTE]
-> all courses are in active development
+> all guides are in active development
 
 1. [Intro to Transformers](https://github.com/jxtngx/transformers-cookbook)
 2. [Intro to Post-training](https://github.com/jxtngx/intro-to-post-training)
