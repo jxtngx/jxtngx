@@ -1,5 +1,5 @@
 ## About
-Hi! I'm Justin, and I'm focused on artificial intelligence and deep learning. 
+Hi! I'm Justin, and I'm focused on artificial intelligence and deep learning solutions and developer education. 
 
 → My core language is Python, and my secondary language is TypeScript <br/>
 → My core focus is deep learning for post-training <br/>
