@@ -20,6 +20,6 @@ Hi! I'm Justin, and I'm focused on artificial intelligence with Meta's Llama fam
 
 1. [Intro to Transformers](https://github.com/jxtngx/transformers-cookbook)
 2. [Intro to Post-training](https://github.com/jxtngx/intro-to-post-training)
-3. [Intro to Applied AI](https://github.com/jxtngx/intro-to-applied-ai)
+3. [Intro to AI Engineering](https://github.com/jxtngx/intro-to-applied-ai)
 4. [Applied AI Engineering](https://github.com/jxtngx/applied-ai-engineering)
 5. [Applied Fullstack AI](https://github.com/jxtngx/applied-fullstack-ai)
