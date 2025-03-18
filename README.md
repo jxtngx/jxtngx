@@ -40,4 +40,4 @@ Hi! I'm Justin, and I'm focused on artificial intelligence solutions and develop
 9. [Fluidstack](https://www.fluidstack.io/): GPU instances
 10. [LambdaLabs](https://lambdalabs.com/): AI developer cloud
 11. [Neon](https://neon.tech/): postgreSQL and pgvector
-12. [chromadb](https://www.trychroma.com/)
+12. [chromadb](https://www.trychroma.com/): vectordb
