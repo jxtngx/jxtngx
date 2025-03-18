@@ -26,18 +26,3 @@ Hi! I'm Justin, and I'm focused on artificial intelligence solutions and develop
 
 > [!NOTE]
 > all guides are in active development as of 03/2025
-
-## Tools I Use or That Interest Me
-
-1. [PyTorch](https://github.com/pytorch/pytorch): deep learning
-2. [torchtune](https://github.com/pytorch/torchtune): post-training for gen AI models
-3. [wandb](https://wandb.ai/site): experiment logging
-4. [Next.js](https://nextjs.org/docs): React framework
-5. [Llama Stack](https://llama-stack.readthedocs.io/en/latest/): agent applications with Llama models
-6. [Pydantic AI](https://ai.pydantic.dev/): agent framework
-7. [Logfire](https://pydantic.dev/logfire): agent telemetry
-8. [Modal](https://modal.com/): serverless compute IaC
-9. [Fluidstack](https://www.fluidstack.io/): GPU instances
-10. [LambdaLabs](https://lambdalabs.com/): AI developer cloud
-11. [Neon](https://neon.tech/): postgreSQL and pgvector
-12. [chromadb](https://www.trychroma.com/): vectordb
