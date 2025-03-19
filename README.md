@@ -19,8 +19,8 @@ Hi! I'm Justin, and I'm focused on artificial intelligence solutions and develop
 
 1. [Intro to Transformers](https://github.com/jxtngx/transformers-cookbook) (PyTorch)
 2. [Intro to Post-training](https://github.com/jxtngx/intro-to-post-training) (PyTorch's torchtune)
-3. [Intro to AI Engineering](https://github.com/jxtngx/intro-to-applied-ai) (Llama Stack | PydanticAI)
-4. [Applied AI Engineering](https://github.com/jxtngx/applied-ai-engineering) (Llama Stack | PydanticAI)
+3. [Intro to AI Engineering](https://github.com/jxtngx/intro-to-applied-ai) (Llama Stack)
+4. [Applied AI Engineering](https://github.com/jxtngx/applied-ai-engineering) (Llama Stack)
 5. [Applied Fullstack AI](https://github.com/jxtngx/applied-fullstack-ai) (TypeScript, Next.js)
 6. [Intro to Next.js for Python Engineers](https://github.com/jxtngx/intro-to-nextjs-for-python-engineers) (TypeScript, Next.js)
 
