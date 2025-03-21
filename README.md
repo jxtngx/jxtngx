@@ -15,9 +15,6 @@ Hi! I'm Justin, and I'm focused on artificial intelligence solutions and develop
 > [!NOTE]
 > past work for Lightning AI can be viewed on my [Lightning org](https://lightning.ai/justin) profile page <br/>
 
-> [!NOTE]
-> current work using Lightning AI Studios can be viewed on my [personal Lightning](https://lightning.ai/jxtngx) profile page
-
 ## Open Guides
 
 1. [Intro to Transformers](https://github.com/jxtngx/transformers-cookbook) (PyTorch)
