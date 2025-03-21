@@ -29,7 +29,7 @@ Hi! I'm Justin, and I'm focused on artificial intelligence solutions and develop
 
 ## Applied Deep Learning
 
-1. [Lightning Lab](https://github.com/jxtngx/lightning-lab): Deep Learning template
+1. [Lightning Lab](https://github.com/jxtngx/lightning-lab): template for research with PyTorch Lightning
 2. [Vision Lab](https://github.com/jxtngx/vision-lab): transformers for vision
 3. [Text Lab](https://github.com/jxtngx/text-lab): transformers for text
 4. [BERT finetune](https://github.com/jxtngx/bert-finetune): finetune BERT with PyTorch Lightning
