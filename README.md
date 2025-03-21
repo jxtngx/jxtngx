@@ -13,7 +13,10 @@ Hi! I'm Justin, and I'm focused on artificial intelligence solutions and develop
 → prior Developer Advocate @ Lightning AI 
 
 > [!NOTE]
-> past work for Lightning AI can be viewed on my [Lightning](https://lightning.ai/justin) profile page <br/>
+> past work for Lightning AI can be viewed on my [Lightning org](https://lightning.ai/justin) profile page <br/>
+
+> [!NOTE]
+> current work using Lightning AI Studios can be viewed on my [personal Lightning](https://lightning.ai/jxtngx) profile page
 
 ## Open Guides
 
