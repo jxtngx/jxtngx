@@ -17,16 +17,17 @@ Hi! I'm Justin, and I'm focused on artificial intelligence solutions and develop
 
 ## Open Guides
 
-1. [Intro to Transformers (architectures)](https://github.com/jxtngx/transformers-cookbook) (Python, PyTorch)
-2. [Intro to Post-training](https://github.com/jxtngx/intro-to-post-training) (Python, PyTorch, Meta torchtune)
-3. [Advanced Post-training](https://github.com/jxtngx/advanced-post-training) (Python, PyTorch, NVIDIA NeMo)
-4. [Intro to AI Engineering](https://github.com/jxtngx/intro-to-applied-ai) (Python, Llama Stack)
-5. [Applied AI Engineering](https://github.com/jxtngx/applied-ai-engineering) (Python, Llama Stack)
-6. [Applied Fullstack AI](https://github.com/jxtngx/applied-fullstack-ai) (TypeScript, Next.js, shadcn/ui, Llama Stack)
-7. [Intro to Next.js for Python Engineers](https://github.com/jxtngx/intro-to-nextjs-for-python-engineers) (TypeScript, Next.js, shadcn/ui)
-
-> [!NOTE]
+> [!IMPORTANT]
 > all guides are in active development as of 03/2025
+
+1. [Intro to AI](https://github.com/jxtngx/intro-to-ai) (Python, PyTorch)
+2. [Intro to Transformers (architectures)](https://github.com/jxtngx/transformers-cookbook) (Python, PyTorch)
+3. [Intro to Post-training](https://github.com/jxtngx/intro-to-post-training) (Python, PyTorch, Meta torchtune)
+4. [Advanced Post-training](https://github.com/jxtngx/advanced-post-training) (Python, PyTorch, NVIDIA NeMo)
+5. [Intro to AI Engineering](https://github.com/jxtngx/intro-to-applied-ai) (Python, Llama Stack)
+6. [Applied AI Engineering](https://github.com/jxtngx/applied-ai-engineering) (Python, Llama Stack)
+7. [Applied Fullstack AI](https://github.com/jxtngx/applied-fullstack-ai) (TypeScript, Next.js, shadcn/ui, Llama Stack)
+8. [Intro to Next.js for Python Engineers](https://github.com/jxtngx/intro-to-nextjs-for-python-engineers) (TypeScript, Next.js, shadcn/ui)
 
 ## Applied Deep Learning
 
