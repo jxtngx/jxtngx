@@ -15,6 +15,14 @@ Hi! I'm Justin, and I'm focused on artificial intelligence solutions and develop
 > [!NOTE]
 > past work for Lightning AI can be viewed on my [Lightning org](https://lightning.ai/justin) profile page <br/>
 
+## Applied Deep Learning
+
+1. [Lightning Lab](https://github.com/jxtngx/lightning-lab): template for research with PyTorch Lightning
+2. [Vision Lab](https://github.com/jxtngx/vision-lab): transformers for vision
+3. [Text Lab](https://github.com/jxtngx/text-lab): transformers for text
+4. [BERT finetune](https://github.com/jxtngx/bert-finetune): finetune BERT with PyTorch Lightning
+5. [ResNet finetune](https://github.com/jxtngx/resnet-finetune): finetune ResNet with PyTorch Lightning
+
 ## Open Guides
 
 > [!IMPORTANT]
@@ -28,11 +36,3 @@ Hi! I'm Justin, and I'm focused on artificial intelligence solutions and develop
 6. [Applied AI Engineering](https://github.com/jxtngx/applied-ai-engineering) (Python, Llama Stack)
 7. [Applied Fullstack AI](https://github.com/jxtngx/applied-fullstack-ai) (TypeScript, Next.js, shadcn/ui, Llama Stack)
 8. [Intro to Next.js for Python Engineers](https://github.com/jxtngx/intro-to-nextjs-for-python-engineers) (TypeScript, Next.js, shadcn/ui)
-
-## Applied Deep Learning
-
-1. [Lightning Lab](https://github.com/jxtngx/lightning-lab): template for research with PyTorch Lightning
-2. [Vision Lab](https://github.com/jxtngx/vision-lab): transformers for vision
-3. [Text Lab](https://github.com/jxtngx/text-lab): transformers for text
-4. [BERT finetune](https://github.com/jxtngx/bert-finetune): finetune BERT with PyTorch Lightning
-5. [ResNet finetune](https://github.com/jxtngx/resnet-finetune): finetune ResNet with PyTorch Lightning
