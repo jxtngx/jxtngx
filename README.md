@@ -28,6 +28,7 @@ Hi! I'm Justin, and I'm focused on artificial intelligence solutions and develop
 1. [Lambda Cloud Python](https://github.com/jxtngx/lambda-cloud-python)
 2. [Lambda Cloud TypeScript](https://github.com/jxtngx/lambda-cloud-typescript)
 3. [Tune Lab](https://github.com/theosis-ai/tunelab)
+4. [Tune API](https://github.com/theosis-ai/tuneapi)
 
 ## Open Guides
 
@@ -42,3 +43,4 @@ Hi! I'm Justin, and I'm focused on artificial intelligence solutions and develop
 6. [Applied AI Engineering](https://github.com/jxtngx/applied-ai-engineering) (Python, Llama Stack)
 7. [Applied Fullstack AI](https://github.com/jxtngx/applied-fullstack-ai) (TypeScript, Next.js, shadcn/ui, Llama Stack)
 8. [Intro to Next.js for Python Engineers](https://github.com/jxtngx/intro-to-nextjs-for-python-engineers) (TypeScript, Next.js, shadcn/ui)
+9. [Intro to AI Assisted Development]()
