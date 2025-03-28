@@ -35,6 +35,10 @@ Hi! I'm Justin, and I'm focused on artificial intelligence solutions and develop
 > [!IMPORTANT]
 > all guides are in active development as of 03/2025
 
+<details>
+
+<summary>Guides</summary>
+
 1. [Intro to AI](https://github.com/jxtngx/intro-to-ai) (Python, PyTorch)
 2. [Intro to Transformers (architectures)](https://github.com/jxtngx/transformers-cookbook) (Python, PyTorch)
 3. [Intro to Post-training](https://github.com/jxtngx/intro-to-post-training) (Python, PyTorch, Meta torchtune)
@@ -44,3 +48,5 @@ Hi! I'm Justin, and I'm focused on artificial intelligence solutions and develop
 7. [Applied Fullstack AI](https://github.com/jxtngx/applied-fullstack-ai) (TypeScript, Next.js, shadcn/ui, Llama Stack)
 8. [Intro to Next.js for Python Engineers](https://github.com/jxtngx/intro-to-nextjs-for-python-engineers) (TypeScript, Next.js, shadcn/ui)
 9. [Intro to AI Assisted Development]()
+
+</details>
