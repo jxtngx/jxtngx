@@ -47,6 +47,6 @@ Hi! I'm Justin, and I'm focused on artificial intelligence solutions and develop
 6. [Applied AI Engineering](https://github.com/jxtngx/applied-ai-engineering) (Python, Llama Stack)
 7. [Applied Fullstack AI](https://github.com/jxtngx/applied-fullstack-ai) (TypeScript, Next.js, shadcn/ui, Llama Stack)
 8. [Intro to Next.js for Python Engineers](https://github.com/jxtngx/intro-to-nextjs-for-python-engineers) (TypeScript, Next.js, shadcn/ui)
-9. [Intro to AI Assisted Development]()
+9. [Intro to AI Assisted Development](https://github.com/jxtngx/ai-assisted-development)
 
 </details>
