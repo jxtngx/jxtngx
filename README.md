@@ -35,18 +35,13 @@ Hi! I'm Justin, and I'm focused on artificial intelligence solutions and develop
 > [!IMPORTANT]
 > all guides are in active development as of 03/2025
 
-<details>
+<!--- - [Intro to AI](https://github.com/jxtngx/intro-to-ai) (Python, PyTorch) -->
+- [Intro to Transformers (architectures)](https://github.com/jxtngx/transformers-cookbook) (Python, PyTorch)
+- [Intro to Post-training](https://github.com/jxtngx/intro-to-post-training) (Python, PyTorch, torchtune)
+- [Advanced Post-training](https://github.com/jxtngx/advanced-post-training) (Python, PyTorch, NVIDIA NeMo)
+- [Intro to AI Engineering](https://github.com/jxtngx/intro-to-applied-ai) (Python, Llama Stack)
+<!--- - [Applied AI Engineering](https://github.com/jxtngx/applied-ai-engineering) (Python, Llama Stack) -->
+<!--- - [Applied Fullstack AI](https://github.com/jxtngx/applied-fullstack-ai) (TypeScript, Next.js, shadcn/ui, Llama Stack) -->
+<!--- - [Intro to Next.js for Python Engineers](https://github.com/jxtngx/intro-to-nextjs-for-python-engineers) (TypeScript, Next.js, shadcn/ui) -->
+<!--- - [Intro to AI Assisted Development](https://github.com/jxtngx/ai-assisted-development) -->
 
-<summary>Guides</summary>
-
-1. [Intro to AI](https://github.com/jxtngx/intro-to-ai) (Python, PyTorch)
-2. [Intro to Transformers (architectures)](https://github.com/jxtngx/transformers-cookbook) (Python, PyTorch)
-3. [Intro to Post-training](https://github.com/jxtngx/intro-to-post-training) (Python, PyTorch, Meta torchtune)
-4. [Advanced Post-training](https://github.com/jxtngx/advanced-post-training) (Python, PyTorch, NVIDIA NeMo)
-5. [Intro to AI Engineering](https://github.com/jxtngx/intro-to-applied-ai) (Python, Llama Stack)
-6. [Applied AI Engineering](https://github.com/jxtngx/applied-ai-engineering) (Python, Llama Stack)
-7. [Applied Fullstack AI](https://github.com/jxtngx/applied-fullstack-ai) (TypeScript, Next.js, shadcn/ui, Llama Stack)
-8. [Intro to Next.js for Python Engineers](https://github.com/jxtngx/intro-to-nextjs-for-python-engineers) (TypeScript, Next.js, shadcn/ui)
-9. [Intro to AI Assisted Development](https://github.com/jxtngx/ai-assisted-development)
-
-</details>
