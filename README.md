@@ -39,7 +39,7 @@ Hi! I'm Justin, and I'm focused on artificial intelligence solutions.
 - [Intro to Transformers (architectures)](https://github.com/jxtngx/transformers-cookbook) (Python, PyTorch)
 - [Intro to Post-training](https://github.com/jxtngx/intro-to-post-training) (Python, PyTorch, torchtune)
 - [Advanced Post-training](https://github.com/jxtngx/advanced-post-training) (Python, PyTorch, NVIDIA NeMo)
-- [Intro to AI Engineering](https://github.com/jxtngx/intro-to-applied-ai) (Python, Llama Stack)
+<!--- - [Intro to AI Engineering](https://github.com/jxtngx/intro-to-applied-ai) (Python, Llama Stack) -->
 <!--- - [Applied AI Engineering](https://github.com/jxtngx/applied-ai-engineering) (Python, Llama Stack) -->
 <!--- - [Applied Fullstack AI](https://github.com/jxtngx/applied-fullstack-ai) (TypeScript, Next.js, shadcn/ui, Llama Stack) -->
 <!--- - [Intro to Next.js for Python Engineers](https://github.com/jxtngx/intro-to-nextjs-for-python-engineers) (TypeScript, Next.js, shadcn/ui) -->
