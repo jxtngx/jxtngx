@@ -30,17 +30,17 @@ Hi! I'm Justin, and I'm focused on artificial intelligence solutions.
 3. [Tune Lab](https://github.com/theosis-ai/tunelab)
 4. [Tune API](https://github.com/theosis-ai/tuneapi)
 
-## Open Guides
+<!--- ## Open Guides
 
 > [!IMPORTANT]
 > all guides are in active development as of 03/2025
 
-<!--- - [Intro to AI](https://github.com/jxtngx/intro-to-ai) (Python, PyTorch) -->
+ - [Intro to AI](https://github.com/jxtngx/intro-to-ai) (Python, PyTorch)
 - [Intro to Transformers (architectures)](https://github.com/jxtngx/transformers-cookbook) (Python, PyTorch)
 - [Intro to Post-training](https://github.com/jxtngx/intro-to-post-training) (Python, PyTorch, torchtune)
 - [Advanced Post-training](https://github.com/jxtngx/advanced-post-training) (Python, PyTorch, NVIDIA NeMo)
-<!--- - [Intro to AI Engineering](https://github.com/jxtngx/intro-to-applied-ai) (Python, Llama Stack) -->
-<!--- - [Applied AI Engineering](https://github.com/jxtngx/applied-ai-engineering) (Python, Llama Stack) -->
-<!--- - [Applied Fullstack AI](https://github.com/jxtngx/applied-fullstack-ai) (TypeScript, Next.js, shadcn/ui, Llama Stack) -->
-<!--- - [Intro to Next.js for Python Engineers](https://github.com/jxtngx/intro-to-nextjs-for-python-engineers) (TypeScript, Next.js, shadcn/ui) -->
+<!--- - [Intro to AI Engineering](https://github.com/jxtngx/intro-to-applied-ai) (Python, Llama Stack)
+<!--- - [Applied AI Engineering](https://github.com/jxtngx/applied-ai-engineering) (Python, Llama Stack)
+<!--- - [Applied Fullstack AI](https://github.com/jxtngx/applied-fullstack-ai) (TypeScript, Next.js, shadcn/ui, Llama Stack)
+<!--- - [Intro to Next.js for Python Engineers](https://github.com/jxtngx/intro-to-nextjs-for-python-engineers) (TypeScript, Next.js, shadcn/ui) 
 <!--- - [Intro to AI Assisted Development](https://github.com/jxtngx/ai-assisted-development) -->
