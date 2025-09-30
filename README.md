@@ -1,10 +1,9 @@
 ## About
-Hi! I'm Justin, and I'm focused on artificial intelligence solutions. 
+Hi! I'm Justin, and I'm focused on artificial intelligence and machine learning. 
 
 → My core language is Python, and my secondary language is TypeScript <br/>
 → My core focus is deep learning for post-training <br/>
 → My secondary focus is building Next.js applications <br/>
-→ My portfolio work lives in <a href="https://github.com/theosis-ai" style="text-decoration: none">@theosis-ai</a> <br/>
 → Major open source projects I've contributed to are pinned here
 
 ## Education and Background
@@ -17,30 +16,22 @@ Hi! I'm Justin, and I'm focused on artificial intelligence solutions.
 
 ## Applied Deep Learning
 
+The following work is not self-written and does not use generative coding tools. 
+
 1. [Lightning Lab](https://github.com/jxtngx/lightning-lab): template for research with PyTorch Lightning
-2. [Vision Lab](https://github.com/jxtngx/vision-lab): vision transformers
-3. [Text Lab](https://github.com/jxtngx/text-lab): text transformers
-4. [BERT finetune](https://github.com/jxtngx/bert-finetune): finetune BERT with PyTorch Lightning
-5. [ResNet finetune](https://github.com/jxtngx/resnet-finetune): finetune ResNet with PyTorch Lightning
+2. [Intro to Post Training](https://github.com/jxtngx/intro-to-post-training) learn finetuning with PyTorch's torchtune
+3. [NeMo Cookbook](https://github.com/jxtngx/nemo-cookbook) finetuning with NVIDIA's NeMo
+4. [Vision Lab](https://github.com/jxtngx/vision-lab): vision transformers
+5. [Text Lab](https://github.com/jxtngx/text-lab): text transformers
+6. [BERT finetune](https://github.com/jxtngx/bert-finetune): finetune BERT with PyTorch Lightning
+7. [ResNet finetune](https://github.com/jxtngx/resnet-finetune): finetune ResNet with PyTorch Lightning
 
 ## AI Assisted Open Source
 
-1. [Lambda Cloud Python](https://github.com/jxtngx/lambda-cloud-python)
-2. [Lambda Cloud TypeScript](https://github.com/jxtngx/lambda-cloud-typescript)
-3. [Tune Lab](https://github.com/theosis-ai/tunelab)
-4. [Tune API](https://github.com/theosis-ai/tuneapi)
+The following work is 90% or more written alongside generative coding tools (Claude Code, GitHub Copilot).
 
-<!--- ## Open Guides
-
-> [!IMPORTANT]
-> all guides are in active development as of 03/2025
-
- - [Intro to AI](https://github.com/jxtngx/intro-to-ai) (Python, PyTorch)
-- [Intro to Transformers (architectures)](https://github.com/jxtngx/transformers-cookbook) (Python, PyTorch)
-- [Intro to Post-training](https://github.com/jxtngx/intro-to-post-training) (Python, PyTorch, torchtune)
-- [Advanced Post-training](https://github.com/jxtngx/advanced-post-training) (Python, PyTorch, NVIDIA NeMo)
-<!--- - [Intro to AI Engineering](https://github.com/jxtngx/intro-to-applied-ai) (Python, Llama Stack)
-<!--- - [Applied AI Engineering](https://github.com/jxtngx/applied-ai-engineering) (Python, Llama Stack)
-<!--- - [Applied Fullstack AI](https://github.com/jxtngx/applied-fullstack-ai) (TypeScript, Next.js, shadcn/ui, Llama Stack)
-<!--- - [Intro to Next.js for Python Engineers](https://github.com/jxtngx/intro-to-nextjs-for-python-engineers) (TypeScript, Next.js, shadcn/ui) 
-<!--- - [Intro to AI Assisted Development](https://github.com/jxtngx/ai-assisted-development) -->
+1. [Claude Code PyTorch](https://github.com/jxtngx/claude-code-pytorch)
+2. [Lambda Cloud Python](https://github.com/jxtngx/lambda-cloud-python)
+3. [Lambda Cloud TypeScript](https://github.com/jxtngx/lambda-cloud-typescript)
+4. [Tune Lab](https://github.com/theosis-ai/tunelab)
+5. [Tune API](https://github.com/theosis-ai/tuneapi)
