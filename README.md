@@ -1,10 +1,10 @@
 ## About
 Hi! I'm Justin, and I'm focused on artificial intelligence and machine learning. 
 
-→ My core language is Python, and my secondary language is TypeScript <br/>
+→ My core language is Python<br/>
 → My core focus is deep learning for post-training <br/>
-→ My secondary focus is building Next.js applications <br/>
-→ Major open source projects I've contributed to are pinned here
+→ My secondary focus is building Next.js applications as post-training utilities<br/>
+→ Major open source projects I've contributed to are pinned here along with portfolio projects
 
 ## Education and Background
 
