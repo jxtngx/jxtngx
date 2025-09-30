@@ -16,7 +16,7 @@ Hi! I'm Justin, and I'm focused on artificial intelligence and machine learning.
 
 ## Applied Deep Learning
 
-The following work is not self-written and does not use generative coding tools. 
+The following work is self-written and does not use generative coding tools. 
 
 1. [Lightning Lab](https://github.com/jxtngx/lightning-lab): template for research with PyTorch Lightning
 2. [Intro to Post Training](https://github.com/jxtngx/intro-to-post-training) learn finetuning with PyTorch's torchtune
