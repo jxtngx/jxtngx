@@ -11,9 +11,6 @@ Hi! I'm Justin, and I'm focused on artificial intelligence and machine learning.
 → MS in AI from Drexel University <br/>
 → prior Developer Advocate @ Lightning AI 
 
-> [!NOTE]
-> past work for Lightning AI can be viewed on my [Lightning org](https://lightning.ai/justin) profile page <br/>
-
 ## Applied Deep Learning
 
 The following work is self-written and does not use generative coding tools. 
