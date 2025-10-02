@@ -30,5 +30,4 @@ The following work is 90% or more written alongside generative coding tools (Cla
 1. [Claude Code PyTorch](https://github.com/jxtngx/claude-code-pytorch)
 2. [Lambda Cloud Python](https://github.com/jxtngx/lambda-cloud-python)
 3. [Lambda Cloud TypeScript](https://github.com/jxtngx/lambda-cloud-typescript)
-4. [Tune Lab](https://github.com/theosis-ai/tunelab)
-5. [Tune API](https://github.com/theosis-ai/tuneapi)
+4. [Tune API](https://github.com/theosis-ai/tuneapi)
