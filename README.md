@@ -20,4 +20,3 @@ The following work is 90% or more written alongside generative coding tools (Cla
 1. [Deep Learning with Claude](https://github.com/jxtngx/deep-learning-with-claude)
 2. [Lambda Cloud Python](https://github.com/jxtngx/lambda-cloud-python)
 3. [Lambda Cloud TypeScript](https://github.com/jxtngx/lambda-cloud-typescript)
-4. [Tune API](https://github.com/theosis-ai/tuneapi)
