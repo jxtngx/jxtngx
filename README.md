@@ -6,10 +6,7 @@ Hi! I'm Justin, and I'm focused on artificial intelligence and machine learning.
 The following work is self-written and does not use generative coding tools. 
 
 1. [Lightning Lab](https://github.com/jxtngx/lightning-lab): template for research with PyTorch Lightning
-2. [Intro to Post Training](https://github.com/jxtngx/intro-to-post-training) learn finetuning with PyTorch's torchtune [**porting to titan**]
 3. [NeMo Cookbook](https://github.com/jxtngx/nemo-cookbook) finetuning with NVIDIA's NeMo [**recommended**]
-4. [Vision Lab](https://github.com/jxtngx/vision-lab): vision transformers
-5. [Text Lab](https://github.com/jxtngx/text-lab): text transformers
 6. [BERT finetune](https://github.com/jxtngx/bert-finetune): finetune BERT with PyTorch Lightning
 7. [ResNet finetune](https://github.com/jxtngx/resnet-finetune): finetune ResNet with PyTorch Lightning
 
