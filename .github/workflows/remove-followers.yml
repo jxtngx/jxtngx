@@ -1,1 +1,146 @@
+# WARNING: This workflow performs destructive account actions (removing followers).
+# You MUST provide a personal access token (PAT) with the appropriate user scopes
+# (at minimum: user) as the repository secret named PAT_TOKEN.
+#
+# How it works:
+# - Manual workflow_dispatch (you must run it yourself).
+# - It lists your followers via the REST API and, for each follower, either:
+#     * in dry-run mode: prints who would be removed
+#     * in live mode: blocks the follower (which removes them) and optionally unblocks them
+#       immediately (block+unblock is commonly used to remove a follower without keeping them blocked).
+#
+# Safety:
+# - Default is dry-run: it will not change anything until you set dry_run to "false".
+# - To protect against accidental runs, you must type the confirm input exactly as "REMOVE_ALL_FOLLOWERS".
+#
+# Notes:
+# - The default GitHub-provided GITHUB_TOKEN does NOT have the permissions to block users.
+#   Create a PAT (Settings -> Developer settings -> Personal access tokens) with "user" scope,
+#   store it in this repository's secrets as PAT_TOKEN.
+# - This action uses pagination and will handle any number of followers.
+#
+# Use responsibly.
 
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Type REMOVE_ALL_FOLLOWERS to confirm'
+        required: true
+        default: ''
+      dry_run:
+        description: 'If "true" just list followers; set to "false" to actually remove them'
+        required: true
+        default: 'true'
+      unblock_after_block:
+        description: 'If "true" the workflow will unblock each user after blocking them (recommended)'
+        required: true
+        default: 'true'
+
+jobs:
+  remove-followers:
+    name: Remove followers (manual)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate confirmation
+        run: |
+          if [ "${{ github.event.inputs.confirm }}" != "REMOVE_ALL_FOLLOWERS" ]; then
+            echo "Confirmation did not match. To run, re-dispatch the workflow and set confirm=REMOVE_ALL_FOLLOWERS"
+            exit 1
+          fi
+      - name: Check for PAT_TOKEN secret
+        run: |
+          if [ -z "${{ secrets.PAT_TOKEN }}" ]; then
+            echo "Secret PAT_TOKEN is missing. Create a PAT with 'user' scope and add it to repository secrets as PAT_TOKEN."
+            exit 1
+          fi
+      - name: Install jq (used for JSON parsing)
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y jq
+      - name: Remove followers (or dry-run)
+        env:
+          GITHUB_PAT: ${{ secrets.PAT_TOKEN }}
+          DRY_RUN: ${{ github.event.inputs.dry_run }}
+          UNBLOCK: ${{ github.event.inputs.unblock_after_block }}
+        run: |
+          set -euo pipefail
+
+          if [ "$DRY_RUN" = "true" ]; then
+            echo "Running in dry-run mode. No followers will be removed."
+          else
+            echo "Running live: followers will be removed. Make sure you understand the consequences."
+          fi
+
+          per_page=100
+          page=1
+          total_processed=0
+
+          while true; do
+            url="https://api.github.com/user/followers?per_page=${per_page}&page=${page}"
+            resp=$(curl -sS -H "Accept: application/vnd.github.v3+json" -H "Authorization: token ${GITHUB_PAT}" "$url")
+
+            # if API rate limit or other error, show and exit
+            if echo "$resp" | jq -e 'has("message") and (.message | type == "string")' > /dev/null 2>&1; then
+              echo "GitHub API returned an error:"
+              echo "$resp" | jq -r '.message'
+              exit 1
+            fi
+
+            names=$(echo "$resp" | jq -r '.[].login' || true)
+            count=$(echo "$names" | wc -l | tr -d ' ')
+
+            # handle case with zero followers (jq prints nothing)
+            if [ -z "$names" ] || [ "$count" -eq 0 ]; then
+              echo "No more followers found (page $page)."
+              break
+            fi
+
+            echo "Processing page $page (followers on this page: $count)..."
+
+            while IFS= read -r login; do
+              [ -z "$login" ] && continue
+              total_processed=$((total_processed+1))
+              if [ "$DRY_RUN" = "true" ]; then
+                echo "[DRY-RUN] Would remove follower: $login"
+              else
+                echo "Removing follower: $login"
+
+                # Block the user (removes them as follower)
+                block_resp=$(curl -sS -o /dev/null -w "%{http_code}" -X PUT \
+                  -H "Accept: application/vnd.github.v3+json" \
+                  -H "Authorization: token ${GITHUB_PAT}" \
+                  "https://api.github.com/user/blocks/${login}")
+
+                if [ "$block_resp" -ge 200 ] && [ "$block_resp" -lt 300 ]; then
+                  echo "  Blocked $login (HTTP $block_resp)"
+                else
+                  echo "  Failed to block $login (HTTP $block_resp). Continuing..."
+                fi
+
+                # Optionally unblock to avoid keeping them blocked
+                if [ "$UNBLOCK" = "true" ]; then
+                  # small pause to ensure GitHub processes block
+                  sleep 1
+                  unblock_resp=$(curl -sS -o /dev/null -w "%{http_code}" -X DELETE \
+                    -H "Accept: application/vnd.github.v3+json" \
+                    -H "Authorization: token ${GITHUB_PAT}" \
+                    "https://api.github.com/user/blocks/${login}")
+                  if [ "$unblock_resp" -ge 200 ] && [ "$unblock_resp" -lt 300 ]; then
+                    echo "  Unblocked $login (HTTP $unblock_resp)"
+                  else
+                    echo "  Failed to unblock $login (HTTP $unblock_resp)."
+                  fi
+                else
+                  echo "  Left $login blocked."
+                fi
+
+                # small delay to reduce rate pressure
+                sleep 1
+              fi
+            done <<< "$names"
+
+            page=$((page+1))
+          done
+
+          echo "Done. Total processed (or would process in dry-run): $total_processed"
