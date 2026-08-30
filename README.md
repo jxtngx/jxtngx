@@ -36,6 +36,7 @@ Beginner → advanced in one language and topic. Harnesses do **not** do the exe
 | [cursor-rtos-lab](https://github.com/jxtngx/cursor-rtos-lab) | Zephyr RTOS (`native_sim` / QEMU) |
 | [cursor-langchain-lab](https://github.com/jxtngx/cursor-langchain-lab) | LangChain agents (Python / TypeScript) |
 | [cursor-data-engineering-lab](https://github.com/jxtngx/cursor-data-engineering-lab) | Python DE for AI/ML |
+| [cursor-computational-neuroscience-lab](https://github.com/jxtngx/cursor-computational-neuroscience-lab) | Computational neuroscience (Brian2) |
 | [cursor-ibkr-tws-lab](https://github.com/jxtngx/cursor-ibkr-tws-lab) | Paper IBKR via `ib-interface` |
 
 ---
