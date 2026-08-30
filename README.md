@@ -51,6 +51,7 @@ Spec-driven boilerplate. Init interviews, then a Cursor team ships tickets.
 | [cursor-deep-learning-factory](https://github.com/jxtngx/cursor-deep-learning-factory) | PyTorch / Hugging Face |
 | [cursor-agent-factory](https://github.com/jxtngx/cursor-agent-factory) | LangChain + LangSmith (Harbor knobs) |
 | [cursor-extension-factory](https://github.com/jxtngx/cursor-extension-factory) | Cursor/Open VSX extension (TS host + Rust crate) |
+| [cursor-swift-factory](https://github.com/jxtngx/cursor-swift-factory) | Swift app (iOS / macOS / watchOS) |
 
 ---
 
