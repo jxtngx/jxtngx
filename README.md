@@ -1,10 +1,12 @@
-# Justin (`jxtngx`)
+# JXTNGX
 
-I build **Cursor-first** labs and factories: learn a stack by typing it, or specify a product and let a Cursor team ship it.
+I build **Cursor-first** labs and factories: learn a skill/stack by typing it in a lab, or specify a product or task intent and let a Cursor team ship it in a factory.
 
-Trajectory: deep-learning contributor and developer advocate at [Lightning AI](https://lightning.ai) → **AI/ML engineer for applied AI and autonomy**.
+Trajectory: MS in AI → deep-learning contributor and developer advocate for PyTorch Lightning, LitGPT, and torchmetrics → AI/ML Engineer for applied AI and autonomy.
 
 Stack: [PyTorch](https://pytorch.org), [NVIDIA](https://www.nvidia.com), [Cursor](https://cursor.com), [Grok](https://grok.com), [LangChain](https://www.langchain.com) / [LangSmith](https://smith.langchain.com).
+
+Compute: [NVIDIA DGX Spark](https://www.nvidia.com/en-us/products/workstations/dgx-spark/) and M5 Max 48GB
 
 ---
 
@@ -53,7 +55,7 @@ Spec-driven boilerplate. Init interviews, then a Cursor team ships tickets.
 
 ## Plugins
 
-Cursor plugins: `.cursor-plugin/plugin.json`, rules, skills, agents. Not labs. Not factories. Not VS Code/Open VSX extensions (those go through [cursor-extension-factory](https://github.com/jxtngx/cursor-extension-factory)).
+Cursor plugins: `.cursor-plugin/plugin.json`, rules, skills, agents.
 
 | Repo | What it is |
 | --- | --- |
