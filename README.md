@@ -4,7 +4,7 @@ I build **Cursor-first** labs and factories: learn a skill/stack by typing it in
 
 Trajectory: MS in AI → deep-learning contributor and developer advocate for PyTorch Lightning, LitGPT, and torchmetrics → AI/ML Engineer for applied AI and autonomy.
 
-Stack: [PyTorch](https://pytorch.org), [NVIDIA](https://www.nvidia.com), [Cursor](https://cursor.com), [Grok](https://grok.com), [LangChain](https://www.langchain.com) / [LangSmith](https://smith.langchain.com).
+Stack: [PyTorch](https://pytorch.org), [Hugging Face](https://huggingface.co/), [NVIDIA](https://www.nvidia.com), [Cursor](https://cursor.com), [Grok](https://grok.com), [LangChain](https://www.langchain.com) / [LangSmith](https://smith.langchain.com).
 
 Compute: [NVIDIA DGX Spark](https://www.nvidia.com/en-us/products/workstations/dgx-spark/) and M5 Max 48GB
 
