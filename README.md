@@ -18,6 +18,7 @@ The IDE is the operating system. Grok and Cursor subagents are mentors or a staf
 | --- | --- |
 | **Lab** | You write every line of domain code. Agents explain, quiz, review. Official docs are the spine. Definition of done: you can recreate it from a blank file. |
 | **Factory** | You write the spec (`@init-*`, discovery). Chief Architect, SME, Scrum, engineers **implement the spec**. Not a lab. |
+| **Command** | Factory Directorate (ops + engineering). Routes a campaign across labs and factories. Does not implement. |
 | **Plugin** | Cursor plugin (rules, skills, agents, commands). Ships into the editor, not as a product repo the user types by hand. |
 
 Commands start work (`@start-lesson`, `@init-extension`). Commands do not silently finish it in a lab.
@@ -53,6 +54,16 @@ Spec-driven boilerplate. Init interviews, then a Cursor team ships tickets.
 | [cursor-agent-factory](https://github.com/jxtngx/cursor-agent-factory) | LangChain + LangSmith (Harbor knobs) |
 | [cursor-extension-factory](https://github.com/jxtngx/cursor-extension-factory) | Cursor/Open VSX extension (TS host + Rust crate) |
 | [cursor-swift-factory](https://github.com/jxtngx/cursor-swift-factory) | Swift app (iOS / macOS / watchOS) |
+
+---
+
+## Command
+
+Fleet C2. Ops liaises; engineering routes. Example campaign: tabletop swarm (Reachy Mini-class + MicroDuck-class).
+
+| Repo | What it is |
+| --- | --- |
+| [cursor-factory-command](https://github.com/jxtngx/cursor-factory-command) | Directorate over the factory fleet |
 
 ---
 
