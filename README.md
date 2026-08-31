@@ -51,7 +51,7 @@ Spec-driven boilerplate. Init interviews, then a Cursor team ships tickets.
 | --- | --- |
 | [cursor-fullstack-factory](https://github.com/jxtngx/cursor-fullstack-factory) | Fullstack app |
 | [cursor-deep-learning-factory](https://github.com/jxtngx/cursor-deep-learning-factory) | PyTorch / Hugging Face |
-| [cursor-langchain-factory](https://github.com/jxtngx/cursor-langchain-factory) | LangChain + LangSmith (Harbor knobs) |
+| [cursor-langchain-factory](https://github.com/jxtngx/cursor-langchain-factory) | LangChain, provider-agnostic (LangSmith, Harbor) |
 | [cursor-grok-factory](https://github.com/jxtngx/cursor-grok-factory) | Grok + Cursor SDK (LangSmith, Harbor) |
 | [cursor-extension-factory](https://github.com/jxtngx/cursor-extension-factory) | Cursor/Open VSX extension (TS host + Rust crate) |
 | [cursor-swift-factory](https://github.com/jxtngx/cursor-swift-factory) | Swift app (iOS / macOS / watchOS) |
