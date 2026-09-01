@@ -29,7 +29,7 @@ Commands start work (`@start-lesson`, `@init-extension`). Commands do not silent
 
 Grok and Cursor exponentiate output. They do not replace `T(n)` / `S(n)`, profiles, linters, call graphs, or the engineering floor.
 
-Language contracts: Python, TypeScript, Rust, C++20 (CUDA). First principles include AI-amplified craft plus common software engineering practice and design patterns as named tools for real seams.
+Language contracts: Python, TypeScript, Swift, Rust, C++20 (CUDA). First principles include AI-amplified craft plus common software engineering practice and design patterns as named tools for real seams.
 
 Full text: [design-philosophies.md](design-philosophies.md)
 
