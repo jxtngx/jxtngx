@@ -36,16 +36,77 @@ Hard sciences (physics, neuroscience, robotics, climate, markets) only move when
 6. **The point is the hard sciences**
    Software exists here to carry models, instruments, and experiments farther. A philosophy that only optimizes for shipping chat features will not survive contact with a training run, a ROS graph, or a simulation timestep. Keep the skills that let you go from notebook to kernel.
 
+7. **Best practices are the floor; patterns name seams**
+   Tests, review, formatters, linters, and CI are not optional because an agent wrote the diff. A design pattern is allowed when it names a real variation you can point at. Cargo-cult architecture is opacity. See [Engineering practice and patterns](#engineering-practice-and-patterns).
+
 ### Refuse
 
 - Merging agent output you cannot reconstruct from a blank file.
 - "The linter is optional because the model is good."
 - Complexity theater: new layers with no change in `T(n)`, `S(n)`, or a profile.
 - Treating Grok or Cursor as the system of record for what the code does.
+- A "clean" pattern with no test and no named seam.
 
 ### Done when
 
 You can explain the algorithm, point at the profile, walk the call graph, and change the hot path without asking the agent to remember it for you.
+
+---
+
+## Engineering practice and patterns
+
+**Stance.** Common software engineering practice is the floor. Design patterns are named tools for real seams. Neither replaces `T(n)`, a test, or a profile.
+
+This is not a Gang of Four catalog. If you cannot say which seam the pattern is for in one sentence, you do not need the pattern yet.
+
+### Principles
+
+1. **The floor is not optional**
+   Tests, code review, linters, formatters, CI, explicit interfaces, fail-loud errors, versioned public APIs, no secrets in the tree. An agent that skips the floor has not shipped. The same floor applies to labs (you write the tests) and factories (the team writes the tests against the spec).
+
+2. **Name the seam, then pick the pattern**
+   Use a pattern when it names a variation that already exists:
+   - **Strategy** — interchangeable algorithms behind one interface (optimizers, trackers, rendering modes).
+   - **Factory / builder** — init that chooses a product from a spec (`@init-*`, device/backend, board).
+   - **Adapter** — a language or runtime boundary (Python calling CUDA, TS host calling a Rust crate).
+   - **Pipeline / chain** — ordered constraints that must stay inspectable.
+   - **Observer / event** — a stream you subscribe to, not a hidden callback soup.
+   - **Module / composition** — `nn.Module`, owned UI components, ROS nodes, Zephyr threads.
+
+   Prefer three clear functions over an Abstract Factory around one class.
+
+3. **Composition over inheritance**
+   Objects contain behavior. Trees that pretend to share it rot. PyTorch modules, shadcn components, Rust traits, and C++20 concepts are the same idea. Inheritance is allowed when it is a true is-a and the base is stable.
+
+4. **SOLID as pressure, not liturgy**
+   Single responsibility at the module you test. Open for extension at a trait, protocol, or interface; closed for smash-and-edit of the hot path. Do not invent an interface for one implementation. Depend on the seam, not the concrete trainer, renderer, or kernel.
+
+5. **Errors are part of the API**
+   Python: exceptions with context, no bare `except`. TypeScript: typed results at process and network edges. Rust: `Result`, no `unwrap` on a library path. C++20: RAII so failure cannot leak a resource. Logging is not control flow.
+
+6. **Tests specify; CI enforces**
+   Unit tests for the function. Golden or property tests for the numerical path. Integration tests for the seam. CI is the floor agents must pass. A pattern with no test is a slide.
+
+### How it shows up per language
+
+| Language | Patterns that usually earn their keep | Floor |
+| --- | --- | --- |
+| Python | `nn.Module` composition; Strategy + registry; graph of functions for agents | pytest, ruff, typed seams at IO |
+| TypeScript | Owned component composition; typed ports; server/client as an explicit Adapter | tsc, eslint, tests on the route |
+| Rust | Traits instead of inheritance; newtypes for invariants; `Result` as the error pattern | cargo test, clippy, no library unwrap |
+| C++20 / CUDA | RAII and Rule of Zero on the host; Strategy at the host API, not inside the kernel | sanitizers, Nsight, no raw `new` |
+
+### Refuse
+
+- Gang of Four bingo.
+- Abstract Factory around a single concrete type.
+- Inheritance as a reuse hammer.
+- Skipping tests because the diagram looked clean.
+- New layers that do not change `T(n)`, `S(n)`, or a failure mode.
+
+### Done when
+
+You can name the seam, the pattern (or why none), the test that pins it, and the complexity it did not worsen.
 
 ---
 
@@ -216,6 +277,6 @@ A stranger can name the grid, the memory space, and the stream on one page, and 
 
 Use Python to find the algorithm. Use TypeScript to name the product boundary. Use Rust when the binary must start small and stay correct. Use C++20 when the bytes must move on purpose.
 
-Grok and Cursor accelerate all four. They do not pick the complexity class, and they do not skip the profile.
+Grok and Cursor accelerate all four. They do not pick the complexity class, they do not skip the profile, and they do not skip the floor.
 
 If two languages disagree, keep the seam boring and the philosophy of the *outer* language in charge of the API.
