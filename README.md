@@ -25,6 +25,16 @@ Commands start work (`@start-lesson`, `@init-extension`). Commands do not silent
 
 ---
 
+## Design
+
+Grok and Cursor exponentiate output. They do not replace `T(n)` / `S(n)`, profiles, linters, or call graphs.
+
+Language contracts: Python, TypeScript, Rust, C++20 (CUDA), plus first principles for AI-amplified craft.
+
+Full text: [design-philosophies.md](design-philosophies.md)
+
+---
+
 ## Labs
 
 Beginner → advanced in one language and topic. Harnesses do **not** do the exercise.
