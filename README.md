@@ -27,9 +27,9 @@ Commands start work (`@start-lesson`, `@init-extension`). Commands do not silent
 
 ## Design
 
-Grok and Cursor exponentiate output. They do not replace `T(n)` / `S(n)`, profiles, linters, or call graphs.
+Grok and Cursor exponentiate output. They do not replace `T(n)` / `S(n)`, profiles, linters, call graphs, or the engineering floor.
 
-Language contracts: Python, TypeScript, Rust, C++20 (CUDA), plus first principles for AI-amplified craft.
+Language contracts: Python, TypeScript, Rust, C++20 (CUDA). First principles include AI-amplified craft plus common software engineering practice and design patterns as named tools for real seams.
 
 Full text: [design-philosophies.md](design-philosophies.md)
 
