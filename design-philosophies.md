@@ -2,7 +2,7 @@
 
 Language contracts for this fleet, written in the register of the [PyTorch Design Philosophy](https://docs.pytorch.org/docs/stable/community/design.html): named principles, explicit refusals, usable as review criteria.
 
-These are not the Zen of Python, the Rust Book preface, or the C++ Core Guidelines reprinted. They are inferred from work this stack treats as exemplary: PyTorch, NVIDIA NeMo, LangGraph / LangChain, Ruff, Candle, Burn, CUDA C++20, Next.js, shadcn/ui.
+These are not the Zen of Python, the Rust Book preface, or the C++ Core Guidelines reprinted. They are inferred from work this stack treats as exemplary: PyTorch, NVIDIA NeMo, LangGraph / LangChain, Ruff, Candle, Burn, CUDA C++20, Next.js, shadcn/ui, Swift / SwiftUI.
 
 Published principles are marked. The rest is a working contract, not a citation.
 
@@ -67,22 +67,22 @@ This is not a Gang of Four catalog. If you cannot say which seam the pattern is 
 2. **Name the seam, then pick the pattern**
    Use a pattern when it names a variation that already exists:
    - **Strategy** — interchangeable algorithms behind one interface (optimizers, trackers, rendering modes).
-   - **Factory / builder** — init that chooses a product from a spec (`@init-*`, device/backend, board).
-   - **Adapter** — a language or runtime boundary (Python calling CUDA, TS host calling a Rust crate).
+   - **Factory / builder** — init that chooses a product from a spec (`@init-*`, device/backend, board, iOS vs macOS vs watchOS).
+   - **Adapter** — a language or runtime boundary (Python calling CUDA, TS host calling a Rust crate, Swift calling C / Objective-C).
    - **Pipeline / chain** — ordered constraints that must stay inspectable.
    - **Observer / event** — a stream you subscribe to, not a hidden callback soup.
-   - **Module / composition** — `nn.Module`, owned UI components, ROS nodes, Zephyr threads.
+   - **Module / composition** — `nn.Module`, owned UI components, SwiftUI views, ROS nodes, Zephyr threads.
 
    Prefer three clear functions over an Abstract Factory around one class.
 
 3. **Composition over inheritance**
-   Objects contain behavior. Trees that pretend to share it rot. PyTorch modules, shadcn components, Rust traits, and C++20 concepts are the same idea. Inheritance is allowed when it is a true is-a and the base is stable.
+   Objects contain behavior. Trees that pretend to share it rot. PyTorch modules, shadcn components, Swift protocols, Rust traits, and C++20 concepts are the same idea. Inheritance is allowed when it is a true is-a and the base is stable.
 
 4. **SOLID as pressure, not liturgy**
    Single responsibility at the module you test. Open for extension at a trait, protocol, or interface; closed for smash-and-edit of the hot path. Do not invent an interface for one implementation. Depend on the seam, not the concrete trainer, renderer, or kernel.
 
 5. **Errors are part of the API**
-   Python: exceptions with context, no bare `except`. TypeScript: typed results at process and network edges. Rust: `Result`, no `unwrap` on a library path. C++20: RAII so failure cannot leak a resource. Logging is not control flow.
+   Python: exceptions with context, no bare `except`. TypeScript: typed results at process and network edges. Swift: `throws` and `Result` at the seam, no `!` as architecture. Rust: `Result`, no `unwrap` on a library path. C++20: RAII so failure cannot leak a resource. Logging is not control flow.
 
 6. **Tests specify; CI enforces**
    Unit tests for the function. Golden or property tests for the numerical path. Integration tests for the seam. CI is the floor agents must pass. A pattern with no test is a slide.
@@ -93,6 +93,7 @@ This is not a Gang of Four catalog. If you cannot say which seam the pattern is 
 | --- | --- | --- |
 | Python | `nn.Module` composition; Strategy + registry; graph of functions for agents | pytest, ruff, typed seams at IO |
 | TypeScript | Owned component composition; typed ports; server/client as an explicit Adapter | tsc, eslint, tests on the route |
+| Swift | Protocol + value types; SwiftUI composition; actors for isolation | XCTest, SwiftLint, Instruments |
 | Rust | Traits instead of inheritance; newtypes for invariants; `Result` as the error pattern | cargo test, clippy, no library unwrap |
 | C++20 / CUDA | RAII and Rule of Zero on the host; Strategy at the host API, not inside the kernel | sanitizers, Nsight, no raw `new` |
 
@@ -188,6 +189,46 @@ A new route can be added by composing typed functions and owned components, with
 
 ---
 
+## Swift
+
+**Stance.** Swift is the language in which the product surface is allowed to be safe without becoming vague.
+
+Apple's published aim is a systems language that still reads like a scripting language: safe, approachable, fast. That is the brief. Value types and optionals make absence and copy visible. Protocols make variation visible. Actors make mutation visible. The factory names the target first: iOS (iPhone or iPad), macOS, or watchOS.
+
+### Principles
+
+1. **Safe by default, explicit when unsafe** *(Swift language goals, published)*
+   Optionals, bounds checks, and value types are the default. `!`, unsafe pointers, and unchecked casts are a seam you write down and test. Force-unwrap is not an architecture.
+
+2. **Protocol-oriented, value-first** *(WWDC protocol-oriented design, published)*
+   Prefer `struct` and `enum` plus protocols with extensions over class trees. Protocol extensions are how you share behavior without inheriting identity. A class is allowed when identity or shared mutation is the point (a true object), not when you needed a method bag.
+
+3. **Local reasoning**
+   A value you hold is yours. Copies do not alias. If two screens share mutable state, that state has a name and an isolation domain. God `ObservableObject`s that own the app are the Swift version of a global.
+
+4. **Own the view**
+   SwiftUI views are source you compose, in the same spirit as shadcn: small views, owned modifiers, no theme engine you cannot open. UIKit is an Adapter when you need it, not a second app living beside SwiftUI.
+
+5. **Concurrency is typed**
+   `async`/`await`, actors, and `Sendable` are the model. Data races are a compiler problem until you opt out. Crossing an isolation domain without `Sendable` is a bug, not a style choice. Instruments Time Profiler and the concurrency debugger are part of "it works."
+
+6. **The platform is the spec**
+   `@init-swift` names iOS / macOS / watchOS, and iPhone vs iPad when the target is iOS. Human Interface Guidelines, Dynamic Type, VoiceOver, and safe-area layout are product constraints, not polish. A view that only fits one simulator size has not shipped.
+
+### Refuse
+
+- `!` and `try!` on a library or view-model path.
+- Massive view-models that own networking, persistence, and navigation.
+- SwiftUI + UIKit soup with no Adapter type at the seam.
+- "Works in the simulator" as a correctness argument.
+- Ignoring `Sendable` because previews compiled.
+
+### Done when
+
+You can name the target device, the owner of each piece of state, and the isolation domain of the async work. XCTest covers the model. Instruments has seen the hang if you claim the UI is smooth.
+
+---
+
 ## Rust
 
 **Stance.** Rust is the language in which the invariant is checked before the binary is small.
@@ -266,17 +307,18 @@ A stranger can name the grid, the memory space, and the stream on one page, and 
 
 ---
 
-## How the four fit together
+## How the languages fit together
 
 | Language | Optimizes for | Pays with | Exemplars |
 | --- | --- | --- | --- |
 | Python | Changing the idea today | Runtime and GIL | PyTorch, NeMo, LangGraph |
-| TypeScript | Changing the team and the boundary | Ceremony at the edges | Next.js, shadcn/ui, LangChain JS |
+| TypeScript | Changing the team and the web boundary | Ceremony at the edges | Next.js, shadcn/ui, LangChain JS |
+| Swift | A safe Apple product surface | Platform coupling | SwiftUI, actors / `Sendable` |
 | Rust | Shipping a trusted binary | Compile time and explicitness | Ruff, Candle, Burn |
 | C++20 / CUDA | Using the machine you bought | Visibility and discipline | CUDA C++20, NeMo kernels |
 
-Use Python to find the algorithm. Use TypeScript to name the product boundary. Use Rust when the binary must start small and stay correct. Use C++20 when the bytes must move on purpose.
+Use Python to find the algorithm. Use TypeScript to name the web boundary. Use Swift to name the Apple surface. Use Rust when the binary must start small and stay correct. Use C++20 when the bytes must move on purpose.
 
-Grok and Cursor accelerate all four. They do not pick the complexity class, they do not skip the profile, and they do not skip the floor.
+Grok and Cursor accelerate all five. They do not pick the complexity class, they do not skip the profile, and they do not skip the floor.
 
 If two languages disagree, keep the seam boring and the philosophy of the *outer* language in charge of the API.
