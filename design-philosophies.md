@@ -2,7 +2,7 @@
 
 Language contracts for this fleet, written in the register of the [PyTorch Design Philosophy](https://docs.pytorch.org/docs/stable/community/design.html): named principles, explicit refusals, usable as review criteria.
 
-These are not the Zen of Python, the Rust Book preface, or the C++ Core Guidelines reprinted. They are inferred from work this stack treats as exemplary: PyTorch, NVIDIA NeMo, LangGraph / LangChain, Ruff, Candle, Burn, CUDA C++20, Next.js, shadcn/ui, Swift / SwiftUI.
+These are not the Zen of Python, the Rust Book preface, or the C++ Core Guidelines reprinted. They are inferred from work this stack treats as exemplary: PyTorch, NVIDIA NeMo, LangGraph / LangChain, Ruff, Candle, Burn, CUDA C++20, Next.js, shadcn/ui, Swift / SwiftUI, Kotlin / Jetpack Compose.
 
 Published principles are marked. The rest is a working contract, not a citation.
 
@@ -67,22 +67,22 @@ This is not a Gang of Four catalog. If you cannot say which seam the pattern is 
 2. **Name the seam, then pick the pattern**
    Use a pattern when it names a variation that already exists:
    - **Strategy** — interchangeable algorithms behind one interface (optimizers, trackers, rendering modes).
-   - **Factory / builder** — init that chooses a product from a spec (`@init-*`, device/backend, board, iOS vs macOS vs watchOS).
-   - **Adapter** — a language or runtime boundary (Python calling CUDA, TS host calling a Rust crate, Swift calling C / Objective-C).
+   - **Factory / builder** — init that chooses a product from a spec (`@init-*`, device/backend, board, iOS vs macOS vs watchOS, ATAK plugin vs Compose app).
+   - **Adapter** — a language or runtime boundary (Python calling CUDA, TS host calling a Rust crate, Swift calling C / Objective-C, Kotlin calling Java / ATAK SDK).
    - **Pipeline / chain** — ordered constraints that must stay inspectable.
    - **Observer / event** — a stream you subscribe to, not a hidden callback soup.
-   - **Module / composition** — `nn.Module`, owned UI components, SwiftUI views, ROS nodes, Zephyr threads.
+   - **Module / composition** — `nn.Module`, owned UI components, SwiftUI views, Compose functions, ROS nodes, Zephyr threads.
 
    Prefer three clear functions over an Abstract Factory around one class.
 
 3. **Composition over inheritance**
-   Objects contain behavior. Trees that pretend to share it rot. PyTorch modules, shadcn components, Swift protocols, Rust traits, and C++20 concepts are the same idea. Inheritance is allowed when it is a true is-a and the base is stable.
+   Objects contain behavior. Trees that pretend to share it rot. PyTorch modules, shadcn components, Swift protocols, Compose functions, Rust traits, and C++20 concepts are the same idea. Inheritance is allowed when it is a true is-a and the base is stable.
 
 4. **SOLID as pressure, not liturgy**
    Single responsibility at the module you test. Open for extension at a trait, protocol, or interface; closed for smash-and-edit of the hot path. Do not invent an interface for one implementation. Depend on the seam, not the concrete trainer, renderer, or kernel.
 
 5. **Errors are part of the API**
-   Python: exceptions with context, no bare `except`. TypeScript: typed results at process and network edges. Swift: `throws` and `Result` at the seam, no `!` as architecture. Rust: `Result`, no `unwrap` on a library path. C++20: RAII so failure cannot leak a resource. Logging is not control flow.
+   Python: exceptions with context, no bare `except`. TypeScript: typed results at process and network edges. Swift: `throws` and `Result` at the seam, no `!` as architecture. Kotlin: `Result` / typed failures, no `!!` as architecture. Rust: `Result`, no `unwrap` on a library path. C++20: RAII so failure cannot leak a resource. Logging is not control flow.
 
 6. **Tests specify; CI enforces**
    Unit tests for the function. Golden or property tests for the numerical path. Integration tests for the seam. CI is the floor agents must pass. A pattern with no test is a slide.
@@ -94,6 +94,7 @@ This is not a Gang of Four catalog. If you cannot say which seam the pattern is 
 | Python | `nn.Module` composition; Strategy + registry; graph of functions for agents | pytest, ruff, typed seams at IO |
 | TypeScript | Owned component composition; typed ports; server/client as an explicit Adapter | tsc, eslint, tests on the route |
 | Swift | Protocol + value types; SwiftUI composition; actors for isolation | XCTest, SwiftLint, Instruments |
+| Kotlin | Data/sealed types; Compose composition; coroutines + Flow | JUnit, detekt, Layout Inspector |
 | Rust | Traits instead of inheritance; newtypes for invariants; `Result` as the error pattern | cargo test, clippy, no library unwrap |
 | C++20 / CUDA | RAII and Rule of Zero on the host; Strategy at the host API, not inside the kernel | sanitizers, Nsight, no raw `new` |
 
@@ -229,6 +230,50 @@ You can name the target device, the owner of each piece of state, and the isolat
 
 ---
 
+## Kotlin (including Jetpack Compose)
+
+**Stance.** Kotlin is the language in which the Android surface is allowed to be null-safe without becoming a Java wrapper.
+
+JetBrains' published aim is a pragmatic language: concise, interoperable, and safe enough that absence is visible (`null`) without giving up the JVM ecosystem. Data classes and sealed types make the model visible. Interfaces make variation visible. Coroutines make concurrency visible. Jetpack Compose is how the view is owned — the same idea as SwiftUI and shadcn: compose small functions, hoist state, no theme engine you cannot open.
+
+The factory names the product first: an **ATAK-CIV / CivTAK plugin** or a **standalone Compose app**, then the device class (phone, tablet, rugged).
+
+### Principles
+
+1. **Null-safe by default, explicit when Java leaks** *(Kotlin language goals, published)*
+   Types are non-null unless marked. Java interop and the ATAK SDK will hand you platform nulls. That is an Adapter with a test, not `!!` as architecture. Platform types stay at the SDK seam.
+
+2. **Data-first, interface-oriented**
+   Prefer `data class`, `sealed class` / `sealed interface`, and small interfaces over Activity/Fragment trees that own the domain. Inheritance is allowed when it is a true is-a against a stable Android or ATAK type you do not control. Your domain does not inherit from `MapComponent` just to share a helper.
+
+3. **Local reasoning**
+   A value you hold is yours. Hoist state. Unidirectional data flow. If two screens share mutable state, that state has a name and a coroutine scope. God `ViewModel`s that own networking, CoT, and the map are the Kotlin version of a global.
+
+4. **Own the composable**
+   Compose functions are source you compose, in the same spirit as SwiftUI and shadcn: small `@Composable`s, owned modifiers, Material 3 as a starting point you can fork. XML Views and the ATAK map host are Adapters when you need them, not a second app living beside Compose.
+
+5. **Concurrency is structured**
+   Coroutines, `Flow`, and explicit dispatchers are the model. `GlobalScope` and raw threads are a seam you write down and test. Crossing a lifecycle without a scoped job is a bug, not a style choice. Layout Inspector, Macrobenchmark, and systrace are part of "it works."
+
+6. **The platform is the spec**
+   `@init-app` names **TAK plugin vs standalone Compose**, then phone / tablet / rugged. Material 3, TalkBack, configuration changes, and (for TAK) the ATAK-CIV host + Cursor-on-Target schema are product constraints, not polish. A plugin that only inflates on one emulator density has not shipped. Do not fork ATAK-CIV into this product; load a plugin into the official host.
+
+### Refuse
+
+- `!!` and `as T` on a library, ViewModel, or CoT path.
+- Massive ViewModels that own map, network, and persistence.
+- Compose + XML + ATAK overlay soup with no Adapter type at the seam.
+- "Works on my emulator" as a correctness argument.
+- `GlobalScope` because a preview compiled.
+- Shipping CoT XML you cannot schema-check.
+- Copying the ATAK-CIV GPL tree into the factory as "the app."
+
+### Done when
+
+You can name the target (plugin vs app, device class), the owner of each piece of state, the coroutine scope of the async work, and — if TAK — the CoT type and map overlay seam. JUnit covers the domain. The host or emulator has shown the overlay if you claim the plugin loads.
+
+---
+
 ## Rust
 
 **Stance.** Rust is the language in which the invariant is checked before the binary is small.
@@ -314,11 +359,12 @@ A stranger can name the grid, the memory space, and the stream on one page, and 
 | Python | Changing the idea today | Runtime and GIL | PyTorch, NeMo, LangGraph |
 | TypeScript | Changing the team and the web boundary | Ceremony at the edges | Next.js, shadcn/ui, LangChain JS |
 | Swift | A safe Apple product surface | Platform coupling | SwiftUI, actors / `Sendable` |
+| Kotlin | A safe Android / TAK surface | JVM + host coupling | Compose, coroutines, ATAK-CIV plugins |
 | Rust | Shipping a trusted binary | Compile time and explicitness | Ruff, Candle, Burn |
 | C++20 / CUDA | Using the machine you bought | Visibility and discipline | CUDA C++20, NeMo kernels |
 
-Use Python to find the algorithm. Use TypeScript to name the web boundary. Use Swift to name the Apple surface. Use Rust when the binary must start small and stay correct. Use C++20 when the bytes must move on purpose.
+Use Python to find the algorithm. Use TypeScript to name the web boundary. Use Swift to name the Apple surface. Use Kotlin to name the Android / CivTAK surface. Use Rust when the binary must start small and stay correct. Use C++20 when the bytes must move on purpose.
 
-Grok and Cursor accelerate all five. They do not pick the complexity class, they do not skip the profile, and they do not skip the floor.
+Grok and Cursor accelerate all six. They do not pick the complexity class, they do not skip the profile, and they do not skip the floor.
 
 If two languages disagree, keep the seam boring and the philosophy of the *outer* language in charge of the API.

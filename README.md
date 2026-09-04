@@ -29,7 +29,7 @@ Commands start work (`@start-lesson`, `@init-extension`). Commands do not silent
 
 Grok and Cursor exponentiate output. They do not replace `T(n)` / `S(n)`, profiles, linters, call graphs, or the engineering floor.
 
-Language contracts: Python, TypeScript, Swift, Rust, C++20 (CUDA). First principles include AI-amplified craft plus common software engineering practice and design patterns as named tools for real seams.
+Language contracts: Python, TypeScript, Swift, Kotlin (Jetpack Compose), Rust, C++20 (CUDA). First principles include AI-amplified craft plus common software engineering practice and design patterns as named tools for real seams.
 
 Full text: [design-philosophies.md](design-philosophies.md)
 
@@ -65,6 +65,7 @@ Spec-driven boilerplate. Init interviews, then a Cursor team ships tickets.
 | [cursor-grok-factory](https://github.com/jxtngx/cursor-grok-factory) | Grok + Cursor SDK (LangSmith, Harbor) |
 | [cursor-extension-factory](https://github.com/jxtngx/cursor-extension-factory) | Cursor/Open VSX extension (TS host + Rust crate) |
 | [cursor-swift-factory](https://github.com/jxtngx/cursor-swift-factory) | Swift app (iOS / macOS / watchOS) |
+| [cursor-kotlin-factory](https://github.com/jxtngx/cursor-kotlin-factory) | Kotlin + Jetpack Compose (ATAK-CIV / CivTAK plugin or standalone) |
 | [cursor-ros2-factory](https://github.com/jxtngx/cursor-ros2-factory) | ROS 2 Jazzy (C++20, sim-first) |
 | [cursor-zephyr-factory](https://github.com/jxtngx/cursor-zephyr-factory) | Zephyr RTOS (`native_sim` first) |
 
