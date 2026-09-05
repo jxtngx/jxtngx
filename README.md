@@ -66,6 +66,7 @@ Spec-driven boilerplate. Init interviews, then a Cursor team ships tickets.
 | [cursor-extension-factory](https://github.com/jxtngx/cursor-extension-factory) | Cursor/Open VSX extension (TS host + Rust crate) |
 | [cursor-swift-factory](https://github.com/jxtngx/cursor-swift-factory) | Swift app (iOS / macOS / watchOS) |
 | [cursor-kotlin-factory](https://github.com/jxtngx/cursor-kotlin-factory) | Kotlin + Jetpack Compose (ATAK-CIV / CivTAK plugin or standalone) |
+| [cursor-cesium-factory](https://github.com/jxtngx/cursor-cesium-factory) | Cesium globe (CesiumJS / Unreal / Unity) |
 | [cursor-ros2-factory](https://github.com/jxtngx/cursor-ros2-factory) | ROS 2 Jazzy (C++20, sim-first) |
 | [cursor-zephyr-factory](https://github.com/jxtngx/cursor-zephyr-factory) | Zephyr RTOS (`native_sim` first) |
 
